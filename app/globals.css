@@ -1,0 +1,160 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f5f7fb;
+  color: #16243b;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  min-height: 100vh;
+  display: grid;
+  place-items: start center;
+  padding: 70px 20px;
+}
+
+.panel {
+  width: min(760px, 100%);
+  padding: 34px;
+  border-radius: 18px;
+  background: white;
+  box-shadow: 0 16px 55px #26395816;
+}
+
+.eyebrow {
+  letter-spacing: 0.14em;
+  color: #5470aa;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+h1 {
+  margin: 8px 0;
+  font-size: 38px;
+}
+
+.intro {
+  color: #64748b;
+  margin-bottom: 26px;
+}
+
+.taskForm {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.taskForm input {
+  flex: 1 1 260px;
+  min-width: 0;
+  padding: 13px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 9px;
+  font-size: 15px;
+}
+
+button {
+  border: 0;
+  padding: 11px 16px;
+  border-radius: 9px;
+  background: #244e9c;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+button.secondary {
+  background: #e8edf5;
+  color: #22354f;
+}
+
+button.danger {
+  background: #fbe5e5;
+  color: #a12727;
+}
+
+.summary {
+  margin-top: 26px;
+  font-size: 13px;
+  font-weight: bold;
+  color: #64748b;
+}
+
+.taskList {
+  padding: 0;
+  list-style: none;
+  margin-top: 10px;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  border-top: 1px solid #edf1f5;
+  padding: 17px 0;
+}
+
+.taskLabel {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  overflow-wrap: anywhere;
+}
+
+.taskLabel input {
+  width: 18px;
+  height: 18px;
+}
+
+.done {
+  text-decoration: line-through;
+  color: #94a3b8;
+}
+
+.actions {
+  display: flex;
+  gap: 7px;
+  flex-shrink: 0;
+}
+
+.empty {
+  color: #64748b;
+  padding: 22px 0;
+}
+
+.error {
+  padding: 12px;
+  border-radius: 9px;
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+@media (max-width: 530px) {
+  .panel {
+    padding: 22px;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  .task {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
